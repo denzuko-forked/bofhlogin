@@ -30,7 +30,7 @@ class FakeShell(object):
         self.files = os.listdir(self.home)
         self.distro = platform.dist()
         if self.distro[0] == 'gentoo':
-            self.prompt = '%(uname)s@$(hostname)s %(pwd)s $ '
+            self.prompt = '%(uname)s@%(hostname)s %(pwd)s $ '
         else:
             # Default to Ubuntu/Debian prompt.
             self.prompt = '%(uname)s@%(hostname)s:%(pwd)s$ '

@@ -82,6 +82,10 @@ class FakeShell(object):
                 pass
             elif cmds == ['']:
                 pass
+            elif cmds[0] == 'uptime':
+                os.system('uptime');
+            elif cmds[0] == 'who':
+                os.system('who');
             elif cmds[0] == 'sudo':
                 if len(cmds) == 1:
                     print(sudomsg)
